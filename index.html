@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space news</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/api.js"></script>
 </head>
 <body>
-    
+    <div id="articles"></div>
+    <template id="article">
+        <div article>
+            <div class="article_title">
+                <h3>{article_title}</h3>
+            </div>
+            <div class="artitle_cover">
+                <img src="#" alt="cover" class="artitle_coverImage">
+            </div>
+            <div class="aritlcle_Data">
+                <div class="aritlcle_NewSite">{aritlcle_NewSite}</div>
+                <div class="aritlcle_Desciption">{aritlcle_Desciption}</div>
+                <div class="aritlcle_timeData">
+                    <div class="aritlcle_published">{aritlcle_published}</div>
+                    <div class="aritlcle_updated">{aritlcle_updated}</div>
+                </div>
+            </div>
+        </div>
+    </template>
 </body>
 </html>
