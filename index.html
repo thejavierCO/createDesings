@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space news</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/moment@2.29.1/moment.js"></script>
+    <script src="https://unpkg.com/commands@0.0.7/lib/commands.js" ></script>
     <script src="./js/api.js"></script>
 </head>
 <body>
+    <h1 style="text-align: center;">Space news</h1>
     <div id="articles"></div>
     <template id="article">
         <div article>
-            <div class="article_title">
-                <h3>{article_title}</h3>
+            <div class="article_Title">
+                <a href="#"><span>{title}</span></a>
             </div>
-            <div class="artitle_cover">
-                <img src="#" alt="cover" class="artitle_coverImage">
-            </div>
-            <div class="aritlcle_Data">
-                <div class="aritlcle_NewSite">{aritlcle_NewSite}</div>
-                <div class="aritlcle_Desciption">{aritlcle_Desciption}</div>
-                <div class="aritlcle_timeData">
-                    <div class="aritlcle_published">{aritlcle_published}</div>
-                    <div class="aritlcle_updated">{aritlcle_updated}</div>
+            <div class="article_Data">
+                <div class="article_Description">{article_Desciption}</div>
+                <div class="article_timeData">
+                    <div class="article_published">{article_published}</div>
+                    <div class="article_updated">{article_updated}</div>
                 </div>
             </div>
         </div>
