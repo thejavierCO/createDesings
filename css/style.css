@@ -1,0 +1,91 @@
+:root{
+    --linghtbg:#fff;
+    --linghtText:#000;
+    --darkbg:#000;
+    --darkText:#fff;
+}
+
+body[dark]{
+    background-color: var(--darkbg);
+    color:var(--darkText);
+}
+
+body{
+    background-color: var(--linghtbg);
+    color:var(--linghtText);
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+#articles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+div[article]{
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: auto auto;
+    width:300px;
+    height:300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div[article] > div{
+    display:grid;
+    color:rgba(0,0,0,0.5);
+    padding: 5px;
+    justify-items:center;
+    align-items: center;
+}
+
+#articles div[article]{
+    margin: 10px 10px 0px 0px;
+}
+
+div[article] div.article_Title{
+    text-align: center;
+    grid-row: 1/-1;
+}
+div[article] div.article_Title span{
+    font-size: 30px;
+    mix-blend-mode:overlay;
+}
+div[article] div.article_Data{
+    display: none;
+    padding: 10px;
+}
+div[article] div.article_Description{
+    max-lines: 1;
+}
+div[article] div.article_Description{
+    display: flex;
+    flex-direction: row;
+}
+
+div[article]:hover > div.article_Title span,div[article]:hover > div.article_Data{
+    display: block;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+    mix-blend-mode: normal;
+    transition: 2s;
+}
+
+/* div[article]:hover > div.article_Title{
+    display: none;
+}
+
+div[article]:hover > div.article_Data{
+    transition-delay: 10s;
+    display: block;
+    mix-blend-mode: normal;
+} */
