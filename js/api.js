@@ -18,6 +18,9 @@ function main(a){
 
 function MakeCards(data){
     try{
+        const fragment = document.createDocumentFragment();
+        const articles = document.querySelector("div#articles");
+        const article = document.querySelector("template#article").content;
         for (let i = 0; i < data.length; i++) {
             const ale = data[i];
             const {id,title,imageUrl,url,publishedAt,summary,updatedAt,newsSite} = ale;
@@ -44,9 +47,6 @@ function MakeCards(data){
 }
 
 main(async ()=>{
-    const fragment = document.createDocumentFragment()
-    const articles = document.querySelector("div#articles")
-    const article = document.querySelector("template#article").content
     let data = await getData();
     MakeCards(data);
 })

@@ -1,0 +1,7 @@
+{
+    "cards":{
+        "min":1,
+        "max":10
+    },
+    "theme":"dark"
+}
