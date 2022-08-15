@@ -1,7 +1,8 @@
 const App = {
-    api:"https://spaceflightnewsapi.net/api/v2/articles?_limit=15",
+    api:"https://api.spaceflightnewsapi.net/v3/articles",
     db:"/json/db.json"
 }
+
 /**
  * obtener info 
  * @returns {Array<{
